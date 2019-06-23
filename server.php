@@ -49,7 +49,7 @@ elseif(isset($_POST['login_user'])){
             $query= "SELECT * FROM user1 WHERE username= '$username' AND password= '$password'";
             $results=mysqli_query($db, $query);
             if( mysqli_fetch_assoc($results)){
-                 $_SESSION['usename']= $username;
+                 $_SESSION['username']= $username;
                  $_SESSION['success']="logged in successfully";
                  header('location: index.php');
             }
