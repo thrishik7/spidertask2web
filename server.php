@@ -1,12 +1,25 @@
 <?php
-
  session_start();
+
 
  $username= "";
  $email="";
  
  
  $errors = array();
+ $servername = "localhost";
+ $username = "root";
+ $password = "";
+
+ // Create connection
+ $conn = mysqli_connect($servername, $username, $password);
+ // Check connection
+ if (!$conn) {
+     die("Connection failed: " . mysqli_connect_error());
+ }
+
+ $sql = "CREATE DATABASE `user`";
+ mysqli_query($conn, $sql);
 
  $db= mysqli_connect('localhost','root','', 'user')or die("could not connect database..");
  if(isset($_POST['register_user']))
