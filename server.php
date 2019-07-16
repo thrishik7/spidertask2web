@@ -23,7 +23,7 @@
 
  $db= mysqli_connect('localhost','root','', 'user')or die("could not connect database..");
 
- $sql = "CREATE TABLE user2(
+ $sql = "CREATE TABLE user1(
     id  INT(6) UNSIGNED AUTO_INCREMENT , 
     username VARCHAR(255) ,
     fullname VARCHAR(255) ,
