@@ -22,6 +22,25 @@
  mysqli_query($conn, $sql);
 
  $db= mysqli_connect('localhost','root','', 'user')or die("could not connect database..");
+
+ $sql = "CREATE TABLE user2(
+    id  INT(6) UNSIGNED AUTO_INCREMENT , 
+    username VARCHAR(255) ,
+    fullname VARCHAR(255) ,
+    email VARCHAR(255),
+    password VARCHAR(255),
+ 
+    PRIMARY KEY(id)
+ 
+)";
+mysqli_query($db, $sql) ;
+
+
+
+
+
+
+
  if(isset($_POST['register_user']))
  {
  $username=mysqli_real_escape_string($db, ($_POST['username']));
